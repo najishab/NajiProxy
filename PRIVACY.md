@@ -4,13 +4,13 @@
 
 ## Introduction
 
-Welcome to Proxy Cloud. This application is designed with complete privacy in mind. This privacy policy explains our commitment to protecting your privacy and personal data.
+Welcome to Naji Proxy. This application is designed with complete privacy in mind. This privacy policy explains our commitment to protecting your privacy and personal data.
 
 ## The Data We Collect
 
 **We collect NO data from you. Period.**
 
-Proxy Cloud is built on the principle of zero data collection:
+Naji Proxy is built on the principle of zero data collection:
 
 - **No usage statistics**: We do not collect any data about how you use the app
 - **No device information**: We do not collect information about your device
