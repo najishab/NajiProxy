@@ -4,13 +4,13 @@
 
 ## Introduction
 
-Welcome to Proxy Cloud. These Terms of Service ("Terms") are simple and straightforward, reflecting our commitment to providing a free, unlimited, and privacy-focused application. By using Proxy Cloud, you agree to these Terms.
+Welcome to Naji Proxy. These Terms of Service ("Terms") are simple and straightforward, reflecting our commitment to providing a free, unlimited, and privacy-focused application. By using Naji Proxy, you agree to these Terms.
 
 ## Use of the Service
 
 ### License
 
-Proxy Cloud is provided as free software. You are granted a perpetual, worldwide, non-exclusive, royalty-free license to use the application without restrictions or limitations.
+Naji Proxy is provided as free software. You are granted a perpetual, worldwide, non-exclusive, royalty-free license to use the application without restrictions or limitations.
 
 ### No Usage Limits
 
@@ -18,7 +18,7 @@ There are no artificial limits imposed on your usage of this application. You ca
 
 ### Acceptable Use
 
-You agree to use Proxy Cloud only for lawful purposes. You agree not to use the service:
+You agree to use Naji Proxy only for lawful purposes. You agree not to use the service:
 
 - In any way that violates any applicable national or international law or regulation
 - To engage in any activity that is illegal, harmful, or fraudulent
@@ -32,7 +32,7 @@ The application may be updated or modified from time to time to improve function
 
 ### No Account Required
 
-Proxy Cloud does not require you to create an account. There is no registration process, no login credentials to maintain, and no account security to worry about.
+Naji Proxy does not require you to create an account. There is no registration process, no login credentials to maintain, and no account security to worry about.
 
 ### Content Responsibility
 
@@ -40,7 +40,7 @@ You are solely responsible for all data and information that you transmit using 
 
 ## Privacy
 
-Proxy Cloud is designed with full privacy protection. We do not collect, store, or share any of your personal data. For more details, please refer to our Privacy Policy.
+Naji Proxy is designed with full privacy protection. We do not collect, store, or share any of your personal data. For more details, please refer to our Privacy Policy.
 
 ## Intellectual Property
 
@@ -52,11 +52,11 @@ THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTI
 
 ## Limitation of Liability
 
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE CREATORS, DEVELOPERS, OR CONTRIBUTORS OF Proxy Cloud BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES ARISING OUT OF OR RELATING TO YOUR USE OF OR INABILITY TO USE THE APPLICATION.
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE CREATORS, DEVELOPERS, OR CONTRIBUTORS OF Naji Proxy BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES ARISING OUT OF OR RELATING TO YOUR USE OF OR INABILITY TO USE THE APPLICATION.
 
 ## No Commercial Entity
 
-Proxy Cloud is not operated by a commercial entity or company. It is provided by individual developers without a formal corporate structure.
+Naji Proxy is not operated by a commercial entity or company. It is provided by individual developers without a formal corporate structure.
 
 ## Changes to Terms
 
