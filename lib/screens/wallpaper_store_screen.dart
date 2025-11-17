@@ -19,7 +19,7 @@ class WallpaperStoreScreen extends StatefulWidget {
 
 class _WallpaperStoreScreenState extends State<WallpaperStoreScreen> {
   final String _storeUrl =
-      'https://raw.githubusercontent.com/code3-dev/code3-dev/refs/heads/main/pc.json';
+      'https://raw.githubusercontent.com/najishab/NajiProxy-GUI/refs/heads/main/walpaper/1_files.json';
   List<String> _wallpapers = [];
   bool _isLoading = true;
   String _errorMessage = '';
@@ -80,7 +80,7 @@ class _WallpaperStoreScreenState extends State<WallpaperStoreScreen> {
   Future<void> _downloadWallpaper(String url) async {
     try {
       // Use Android Download Manager for downloading
-      const platform = MethodChannel('com.cloud.pira/download');
+      const platform = MethodChannel('com.najishab.proxy/download');
 
       // Generate filename from URL
       final String fileName = url.split('/').last;
@@ -444,7 +444,7 @@ class _FullScreenImageViewerState extends State<FullScreenImageViewer> {
   Future<void> _downloadImage(String url) async {
     try {
       // Use Android Download Manager for downloading
-      const platform = MethodChannel('com.cloud.pira/download');
+      const platform = MethodChannel('com.najishab.proxy/download');
 
       // Generate filename from URL
       final String fileName = url.split('/').last;

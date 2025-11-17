@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:proxycloud/models/v2ray_config.dart';
-import 'package:proxycloud/services/v2ray_service.dart';
-import 'package:proxycloud/utils/app_localizations.dart';
+import 'package:najiproxy/models/v2ray_config.dart';
+import 'package:najiproxy/services/v2ray_service.dart';
+import 'package:najiproxy/utils/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AutoSelectResult {

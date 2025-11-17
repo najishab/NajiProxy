@@ -31,6 +31,7 @@ class _HostCheckerScreenState extends State<HostCheckerScreen> {
     'https://www.facebook.com',
     'https://telegram.org',
     'https://www.github.com',
+    'https://www.pornhub.com',
     'https://www.stackoverflow.com',
     'https://www.reddit.com',
     'https://www.wikipedia.org',
@@ -47,7 +48,7 @@ class _HostCheckerScreenState extends State<HostCheckerScreen> {
     'https://www.yahoo.com',
     'https://www.duckduckgo.com',
     'https://www.twitch.tv',
-    'https://www.paypal.com',
+    'https://www.paypal.com'
   ];
 
   // Map of URL display names
@@ -63,6 +64,7 @@ class _HostCheckerScreenState extends State<HostCheckerScreen> {
     'https://www.facebook.com': 'Facebook',
     'https://telegram.org': 'Telegram',
     'https://www.github.com': 'GitHub',
+    'https://www.pornhub.com': 'PornHub',
     'https://www.stackoverflow.com': 'Stack Overflow',
     'https://www.reddit.com': 'Reddit',
     'https://www.wikipedia.org': 'Wikipedia',
@@ -79,7 +81,7 @@ class _HostCheckerScreenState extends State<HostCheckerScreen> {
     'https://www.yahoo.com': 'Yahoo',
     'https://www.duckduckgo.com': 'DuckDuckGo',
     'https://www.twitch.tv': 'Twitch',
-    'https://www.paypal.com': 'PayPal',
+    'https://www.paypal.com': 'PayPal'
   };
 
   @override
@@ -260,7 +262,7 @@ class _HostCheckerScreenState extends State<HostCheckerScreen> {
         Wrap(
           spacing: 8,
           runSpacing: 8,
-          children: _defaultUrls.take(8).map((url) {
+          children: _defaultUrls.take(12).map((url) {
             return InkWell(
               onTap: () {
                 setState(() {

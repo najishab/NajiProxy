@@ -21,7 +21,7 @@ class _BatterySettingsScreenState extends State<BatterySettingsScreen> {
     });
 
     try {
-      const platform = MethodChannel('com.cloud.pira/settings');
+      const platform = MethodChannel('com.najishab.proxy/settings');
       await platform.invokeMethod('openBatteryOptimizationSettings');
 
       if (mounted) {
@@ -67,7 +67,7 @@ class _BatterySettingsScreenState extends State<BatterySettingsScreen> {
     });
 
     try {
-      const platform = MethodChannel('com.cloud.pira/settings');
+      const platform = MethodChannel('com.najishab.proxy/settings');
       await platform.invokeMethod('openGeneralBatterySettings');
 
       if (mounted) {
@@ -111,7 +111,7 @@ class _BatterySettingsScreenState extends State<BatterySettingsScreen> {
     });
 
     try {
-      const platform = MethodChannel('com.cloud.pira/settings');
+      const platform = MethodChannel('com.najishab.proxy/settings');
       await platform.invokeMethod('openAppSettings');
 
       if (mounted) {

@@ -134,7 +134,7 @@ class _SubscriptionManagementScreenState
       _urlController.text = subscription.url;
       _isUpdating = true;
       _isEditingDefaultSubscription =
-          subscription.name.toLowerCase() == 'default subscription';
+          subscription.name.toLowerCase() == 'naji server';
       _currentSubscriptionId = subscription.id;
     });
   }
@@ -452,7 +452,7 @@ class _SubscriptionManagementScreenState
         // Create updated subscription with default URL
         final updatedSubscription = subscription.copyWith(
           url:
-              'https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/proxy',
+              'https://raw.githubusercontent.com/najishab/NajiProxy-GUI/refs/heads/main/telegram/v2ray',
         );
 
         // Update the subscription
@@ -747,7 +747,7 @@ class _SubscriptionManagementScreenState
                                     ),
                                   ),
                                   if (subscription.name.toLowerCase() ==
-                                      'default subscription')
+                                      'naji server')
                                     IconButton(
                                       icon: const Icon(
                                         Icons.restart_alt,
@@ -768,13 +768,13 @@ class _SubscriptionManagementScreenState
                                       Icons.delete,
                                       color:
                                           subscription.name.toLowerCase() ==
-                                              'default subscription'
+                                              'naji server'
                                           ? Colors.grey
                                           : Colors.red,
                                     ),
                                     onPressed:
                                         subscription.name.toLowerCase() ==
-                                            'default subscription'
+                                            'naji server'
                                         ? null
                                         : () => _deleteSubscription(
                                             context,
@@ -782,7 +782,7 @@ class _SubscriptionManagementScreenState
                                           ),
                                     tooltip:
                                         subscription.name.toLowerCase() ==
-                                            'default subscription'
+                                            'naji server'
                                         ? context.tr(
                                             TranslationKeys
                                                 .subscriptionManagementCannotDeleteDefault,

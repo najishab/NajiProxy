@@ -74,7 +74,7 @@ class _MyAppState extends State<MyApp> {
       child: Consumer<LanguageProvider>(
         builder: (context, languageProvider, child) {
           return MaterialApp(
-            title: 'Proxy Cloud',
+            title: 'Naji Proxy',
             debugShowCheckedModeBanner: false,
             theme: AppTheme.darkTheme(languageProvider.currentLanguage.code),
             locale: languageProvider.locale,

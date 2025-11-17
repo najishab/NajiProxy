@@ -1,12 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import '../providers/language_provider.dart';
 import '../utils/app_localizations.dart';
 
-class AboutScreen extends StatelessWidget {
+// به StatefulWidget تبدیل شد
+class AboutScreen extends StatefulWidget {
   const AboutScreen({Key? key}) : super(key: key);
 
+  @override
+  State<AboutScreen> createState() => _AboutScreenState();
+}
+
+class _AboutScreenState extends State<AboutScreen> {
+  String _appVersion = ''; // متغیر برای نگهداری نسخه برنامه
+
+  @override
+  void initState() {
+    super.initState();
+    _getAppVersion(); // فراخوانی تابع برای گرفتن نسخه
+  }
+
+  // این تابع نسخه برنامه را به صورت اتوماتیک می‌خواند
+  Future<void> _getAppVersion() async {
+    final packageInfo = await PackageInfo.fromPlatform();
+    if (mounted) {
+      setState(() {
+        _appVersion = packageInfo.version;
+      });
+    }
+  }
+
+  // این تابع برای باز کردن لینک‌ها استفاده می‌شود
   Future<void> _launchUrl(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
@@ -26,6 +52,7 @@ class AboutScreen extends StatelessWidget {
     );
   }
 
+  // تمام محتوای UI در این متد قرار دارد
   Widget _buildAboutScreen(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -60,11 +87,12 @@ class AboutScreen extends StatelessWidget {
 
             const SizedBox(height: 8),
 
-            // App Version
+            // App Version - به صورت اتوماتیک نمایش داده می‌شود
             Text(
               context.tr(
                 TranslationKeys.aboutVersion,
-                parameters: {'version': '1.0.1'},
+                // از متغیر _appVersion استفاده می‌کند
+                parameters: {'version': _appVersion},
               ),
               style: const TextStyle(fontSize: 16, color: Colors.grey),
             ),
@@ -145,32 +173,6 @@ class AboutScreen extends StatelessWidget {
 
                 const SizedBox(height: 12),
 
-                // IRCF Channel Button
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton.icon(
-                    onPressed: () {
-                      _launchUrl('https://t.me/skeptictyson');
-                    },
-                    icon: Image.asset(
-                      'assets/images/ircf.png',
-                      width: 24,
-                      height: 24,
-                    ),
-                    label: Text(context.tr(TranslationKeys.ircfChannel)),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 5, 83, 46),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 12),
-
                 // GitHub Source Button
                 SizedBox(
                   width: double.infinity,
@@ -182,56 +184,6 @@ class AboutScreen extends StatelessWidget {
                     label: Text(context.tr(TranslationKeys.aboutGithubSource)),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blueGrey,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 12),
-
-                // Privacy Policy Button
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton.icon(
-                    onPressed: () {
-                      _launchUrl(
-                        'https://github.com/najishab/NajiProxy/blob/master/PRIVACY.md',
-                      );
-                    },
-                    icon: const Icon(Icons.privacy_tip_outlined),
-                    label: Text(context.tr(TranslationKeys.aboutPrivacyPolicy)),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.teal,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 12),
-
-                // Terms of Service Button
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton.icon(
-                    onPressed: () {
-                      _launchUrl(
-                        'https://github.com/najishab/NajiProxy/blob/master/TERMS.md',
-                      );
-                    },
-                    icon: const Icon(Icons.gavel_outlined),
-                    label: Text(
-                      context.tr(TranslationKeys.aboutTermsOfService),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepPurple,
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       shape: RoundedRectangleBorder(

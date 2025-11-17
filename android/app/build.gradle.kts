@@ -43,8 +43,6 @@ android {
         applicationId = "com.najishab.proxy"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = 2
-        versionName = "1.0.1"
 
         manifestPlaceholders.put("io.flutter.embedding.android.EnableImpeller", "false")
     }

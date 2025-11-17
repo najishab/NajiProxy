@@ -18,7 +18,7 @@ class StoreScreen extends StatefulWidget {
 
 class _StoreScreenState extends State<StoreScreen> {
   final String _storeUrl =
-      'https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/store.json';
+      'https://raw.githubusercontent.com/najishab/NajiProxy-GUI/refs/heads/main/telegram/store.json';
   List<dynamic> _storeItems = [];
   List<dynamic> _filteredItems = [];
   bool _isLoading = true;
@@ -147,7 +147,7 @@ class _StoreScreenState extends State<StoreScreen> {
   }
 
   Future<void> _launchTelegramUrl() async {
-    final Uri url = Uri.parse('https://t.me/h3dev');
+    final Uri url = Uri.parse('https://t.me/naji_shab');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       if (mounted) {
         ErrorSnackbar.show(

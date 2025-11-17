@@ -3,7 +3,7 @@ import '../models/telegram_proxy.dart';
 
 class TelegramProxyService {
   static const String proxyUrl =
-      'https://raw.githubusercontent.com/hookzof/socks5_list/master/tg/mtproto.json';
+      'https://raw.githubusercontent.com/najishab/NajiProxy-GUI/refs/heads/main/telegram/mtproto.json';
 
   // Singleton pattern
   static final TelegramProxyService _instance =

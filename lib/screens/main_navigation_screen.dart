@@ -38,12 +38,12 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   }
 
   Future<void> _launchTelegramUrl() async {
-    final Uri url = Uri.parse('https://t.me/h3dev');
+    final Uri url = Uri.parse('https://t.me/naji_shab');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       if (mounted) {
         ErrorSnackbar.show(
           context,
-          TrHelper.errorUrlFormat(context, 'https://t.me/h3dev'),
+          TrHelper.errorUrlFormat(context, 'https://t.me/naji_shab'),
         );
       }
     }

@@ -5,9 +5,6 @@ class AppUpdate {
   final String url;
   final String messText;
 
-  // Current app version - manually set
-  static const String currentAppVersion = '3.7.8';
-
   AppUpdate({required this.version, required this.url, required this.messText});
 
   factory AppUpdate.fromJson(Map<String, dynamic> json) {
@@ -27,9 +24,8 @@ class AppUpdate {
     }
   }
 
-  bool hasUpdate() {
-    // Use the manually set current version
-    return _isNewerVersion(currentAppVersion, version);
+  bool hasUpdate(String currentVersion) {
+    return _isNewerVersion(currentVersion, version);
   }
 
   bool _isNewerVersion(String currentVersion, String newVersion) {

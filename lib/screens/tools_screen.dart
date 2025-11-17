@@ -19,6 +19,7 @@ import 'wallpaper_settings_screen.dart';
 import 'wallpaper_store_screen.dart';
 import 'battery_settings_screen.dart';
 import 'language_settings_screen.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class ToolsScreen extends StatefulWidget {
   const ToolsScreen({super.key});
@@ -29,13 +30,22 @@ class ToolsScreen extends StatefulWidget {
 
 class _ToolsScreenState extends State<ToolsScreen> {
   AppUpdate? _update;
+  String _currentVersion = '';
 
   @override
   void initState() {
     super.initState();
     _checkForUpdates();
+    _getCurrentAppVersion();
   }
-
+  Future<void> _getCurrentAppVersion() async {
+    final packageInfo = await PackageInfo.fromPlatform();
+    if (mounted) {
+      setState(() {
+        _currentVersion = packageInfo.version;
+      });
+    }
+  }
   Future<void> _checkForUpdates() async {
     final updateService = UpdateService();
     final update = await updateService.checkForUpdates();
@@ -422,7 +432,7 @@ class _ToolsScreenState extends State<ToolsScreen> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
-                  TrHelper.versionFormat(context, AppUpdate.currentAppVersion),
+                  TrHelper.versionFormat(context, _currentVersion),
                   style: TextStyle(fontSize: 12, color: Colors.grey[400]),
                 ),
                 const Spacer(),

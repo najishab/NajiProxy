@@ -51,13 +51,7 @@ class AppLanguage {
   // Predefined languages
   static const List<AppLanguage> supportedLanguages = [
     AppLanguage(name: 'English', code: 'en', flag: '🇺🇸', direction: 'ltr'),
-    AppLanguage(name: 'فارسی', code: 'fa', flag: '🦁', direction: 'rtl'),
-    AppLanguage(name: 'Русский', code: 'ru', flag: '🇷🇺', direction: 'ltr'),
-    AppLanguage(name: '中文', code: 'zh', flag: '🇨🇳', direction: 'ltr'),
-    AppLanguage(name: 'Español', code: 'es', flag: '🇪🇸', direction: 'ltr'),
-    AppLanguage(name: 'Français', code: 'fr', flag: '🇫🇷', direction: 'ltr'),
-    AppLanguage(name: 'العربية', code: 'ar', flag: '🇸🇦', direction: 'rtl'),
-    AppLanguage(name: 'Türkçe', code: 'tr', flag: '🇹🇷', direction: 'ltr'),
+    AppLanguage(name: 'فارسی', code: 'fa', flag: '🇮🇷', direction: 'rtl'),
   ];
 
   static AppLanguage getByCode(String code) {

@@ -4,11 +4,11 @@ import 'dart:math';
 import 'package:flutter_v2ray_client/flutter_v2ray.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:proxycloud/models/v2ray_config.dart';
-import 'package:proxycloud/models/subscription.dart';
+import 'package:najiproxy/models/v2ray_config.dart';
+import 'package:najiproxy/models/subscription.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:proxycloud/utils/auto_select_util.dart';
+import 'package:najiproxy/utils/auto_select_util.dart';
 
 class IpInfo {
   final String ip;
@@ -94,7 +94,7 @@ class V2RayService extends ChangeNotifier {
           return _cachedAppList!;
         }
 
-        const platform = MethodChannel('com.cloud.pira/app_list');
+        const platform = MethodChannel('com.najishab.proxy/app_list');
         final List<dynamic> result = await platform.invokeMethod(
           'getInstalledApps',
         );

@@ -5,14 +5,14 @@ class AppTheme {
   // Material 3 Blue Dark Theme Colors
   static const Color primaryBlue = Color(0xFF4285F4); // Material Blue 500
   static const Color primaryBlueDark = Color(0xFF1A73E8); // Material Blue 700
-  static const Color secondaryBlue = Color(0xFF34A853); // Material Green 500
+  static const Color secondaryBlue = Color(0xFF02D64A); // Material Green 500
   static const Color surfaceDark = Color(0xFF121212); // Dark surface
   static const Color surfaceDarker = Color(0xFF0A0A0A); // Even darker surface
   static const Color surfaceContainer = Color(0xFF1E1E1E); // Container surface
   static const Color surfaceCard = Color(0xFF252525); // Card surface
   
   // Status colors
-  static const Color connectedGreen = Color(0xFF34A853); // Material Green 500
+  static const Color connectedGreen = Color(0xFF02D64A); // Material Green 500
   static const Color disconnectedRed = Color(0xFFEA4335); // Material Red 500
   static const Color connectingBlue = Color(0xFF4285F4); // Material Blue 500
 

@@ -22,7 +22,7 @@ class V2RayProvider with ChangeNotifier, WidgetsBindingObserver {
   bool _isInitializing = true; // New flag to track initialization state
 
   // Method channel for VPN control
-  static const platform = MethodChannel('com.cloud.pira/vpn_control');
+  static const platform = MethodChannel('com.najishab.proxy/vpn_control');
 
   List<V2RayConfig> get configs => _configs;
   List<Subscription> get subscriptions => _subscriptions;
@@ -322,13 +322,13 @@ class V2RayProvider with ChangeNotifier, WidgetsBindingObserver {
     try {
       _subscriptions = await _v2rayService.loadSubscriptions();
 
-      // Create default subscription if no subscriptions exist
+      // Create Naji Server if no subscriptions exist
       if (_subscriptions.isEmpty) {
         final defaultSubscription = Subscription(
           id: DateTime.now().millisecondsSinceEpoch.toString(),
-          name: 'Default Subscription',
+          name: 'Naji Server',
           url:
-              'https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/proxy',
+              'https://raw.githubusercontent.com/najishab/NajiProxy-GUI/refs/heads/main/telegram/v2ray',
           lastUpdated: DateTime.now(),
           configIds: [],
         );

@@ -7,9 +7,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:proxycloud/providers/language_provider.dart';
+import 'package:najiproxy/providers/language_provider.dart';
 
-import 'package:proxycloud/main.dart';
+import 'package:najiproxy/main.dart';
 
 void main() {
   testWidgets('App loads correctly', (WidgetTester tester) async {

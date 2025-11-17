@@ -1,7 +1,5 @@
-name: proxycloud
-description: "A modern, feature-rich VPN client that's fast, unlimited, secure, and completely free."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
+name: najiproxy
+description: "A fast, secure, and unlimited VPN client powered by V2Ray. Experience true internet freedom with NajiProxy."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
@@ -16,7 +14,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 3.7.8+48
+version: 1.0.3+3
 
 environment:
   sdk: ^3.9.2
@@ -56,6 +54,7 @@ dependencies:
   file_picker: ^10.3.2
   permission_handler: ^12.0.1
   image_picker: ^1.1.2
+  package_info_plus: ^9.0.0
 
 dev_dependencies:
   flutter_test:

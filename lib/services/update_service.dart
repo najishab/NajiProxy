@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
-import 'package:proxycloud/models/app_update.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:najiproxy/models/app_update.dart';
 import '../utils/app_localizations.dart';
 
 class UpdateService {
   static const String updateUrl =
-      'https://raw.githubusercontent.com/code3-dev/ProxyCloud-GUI/refs/heads/main/config/mobile.json';
+      'https://raw.githubusercontent.com/najishab/NajiProxy-GUI/refs/heads/main/telegram/update.json';
 
   // Check for updates
   Future<AppUpdate?> checkForUpdates() async {
@@ -23,7 +24,9 @@ class UpdateService {
           );
       if (response.statusCode == 200) {
         final AppUpdate? update = AppUpdate.fromJsonString(response.body);
-        if (update != null && update.hasUpdate()) {
+        final PackageInfo packageInfo = await PackageInfo.fromPlatform();
+        final String currentVersion = packageInfo.version;
+        if (update != null && update.hasUpdate(currentVersion)) {
           return update;
         }
       }

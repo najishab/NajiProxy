@@ -3,13 +3,13 @@ import 'dart:math';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:proxycloud/models/v2ray_config.dart';
-import 'package:proxycloud/models/subscription.dart';
-import 'package:proxycloud/providers/v2ray_provider.dart';
-import 'package:proxycloud/services/v2ray_service.dart';
-import 'package:proxycloud/theme/app_theme.dart';
-import 'package:proxycloud/utils/app_localizations.dart';
-import 'package:proxycloud/utils/auto_select_util.dart';
+import 'package:najiproxy/models/v2ray_config.dart';
+import 'package:najiproxy/models/subscription.dart';
+import 'package:najiproxy/providers/v2ray_provider.dart';
+import 'package:najiproxy/services/v2ray_service.dart';
+import 'package:najiproxy/theme/app_theme.dart';
+import 'package:najiproxy/utils/app_localizations.dart';
+import 'package:najiproxy/utils/auto_select_util.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Constants for shared preferences keys
@@ -1080,7 +1080,7 @@ class _ServerSelectionScreenState extends State<ServerSelectionScreen> {
                                     ),
                                   ),
                                   const Icon(
-                                    Icons.bolt,
+                                    Icons.auto_mode,
                                     color: AppTheme.primaryGreen,
                                   ),
                                 ],
@@ -1245,10 +1245,10 @@ class _ServerSelectionScreenState extends State<ServerSelectionScreen> {
                                                   ),
                                                 )
                                               : _pings[config.id] == -1
-                                              ? const Text(
-                                                  '-1',
+                                              ? Text(
+                                                  'Error❌',
                                                   style: TextStyle(
-                                                    color: Colors.red,
+                                                    color: Colors.pink.shade600,
                                                     fontSize: 12,
                                                     fontWeight: FontWeight.bold,
                                                   ),
@@ -1306,8 +1306,8 @@ class _ServerSelectionScreenState extends State<ServerSelectionScreen> {
                                             ),
                                             child: Text(
                                               _getSubscriptionName(config),
-                                              style: const TextStyle(
-                                                color: Colors.blueGrey,
+                                              style: TextStyle(
+                                                color: Colors.cyan.shade900,
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -1340,13 +1340,13 @@ class _ServerSelectionScreenState extends State<ServerSelectionScreen> {
   Color _getConfigTypeColor(String configType) {
     switch (configType.toLowerCase()) {
       case 'vmess':
-        return Colors.blue;
+        return Colors.greenAccent.shade400;
       case 'vless':
-        return Colors.purple;
+        return Colors.redAccent.shade400;
       case 'shadowsocks':
-        return Colors.green;
+        return Colors.orange.shade600;
       default:
-        return Colors.grey;
+        return Colors.purpleAccent.shade400;
     }
   }
 
@@ -1360,7 +1360,7 @@ class _ServerSelectionScreenState extends State<ServerSelectionScreen> {
           (sub) => sub.configIds.contains(config.id),
           orElse: () => Subscription(
             id: '',
-            name: 'Default Subscription',
+            name: 'Naji Server',
             url: '',
             lastUpdated: DateTime.now(),
             configIds: [],
